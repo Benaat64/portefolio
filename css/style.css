@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 46px;
+  display: inline-block;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+body {
+  overflow: hidden;
+  position: relative;
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.bg-1 {
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  animation: page-up 1s ease 0s none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  background-color:#000000;
+}
+
+@keyframes page-up {
+  0% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 1;
+  }
+}
+
+.loading-data {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-text {
+  .char {
+    opacity: 0;
+    animation: loading-text 4s   2s ease-in-out;
+    display: inline-block;
+    &:nth-child(1) {
+      animation-delay: 0.9s;
+    }
+    &:nth-child(2) {
+      animation-delay: 1s;
+    }
+    &:nth-child(3) {
+      animation-delay: 1.1s;
+    }
+    &:nth-child(4) {
+      animation-delay: 1.2s;
+    }
+    &:nth-child(5) {
+      animation-delay: 1.3s;
+    }
+    &:nth-child(6) {
+      animation-delay: 1.4s;
+    }
+    &:nth-child(7) {
+      animation-delay: 1.5s;
+    }
+    &:nth-child(8) {
+        animation-delay: 1.6s;
+      }
+  }
+}
+
+@keyframes loading-text {
+  0% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  20% {
+    transform: translateY(-60%);
+    opacity: 1;
+  }
+  40% {
+    transform: translateY(-80%);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+ .container {
+     display: none;
+     width: 100vw;
+     height: 100vh;
+    
+     position: relative;
+     
+ }
+ .box-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ }
+
+
+.box1,.box2,.box3,.box4{
+  width: 30%;
+  height: auto;
+  position: relative;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.box2,.box3{
+  height: 100%;
+}
+.row {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: auto;
+}
+
+ svg {
+  margin: auto;
+  width: 80%;
+  height: 80%;
+  
+}
+
+
+
+
+/* .box1:hover {
+  transition: transform 0.5s 0.3s ease;
+  transform: translateX(-70%) translateY(-20%);
+} */
+
+
+.box-container {
+  transition: transform 1s 0.3s ease;
+}
+
+
+.box:hover ellipse {
+  stroke-dasharray: 730;
+  stroke-dashoffset: 730;
+  stroke-linecap: round;
+  animation: ellipse 1s forwards;
+  animation-fill-mode: forwards;
+}
+
+svg:not(:hover) ellipse {
+  stroke-dasharray:730;
+  stroke-dashoffset: 730; 
+  
+}
+svg ellipse {
+  transition: transform 0.5s ease; 
+  fill: none;
+  
+}
+
+@keyframes ellipse {
+  to {
+    stroke-dashoffset: 0; 
+  }
+}
+
+ p{
+  color:black;
+  position:absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+.test{
+  display: none;
+}
+.test1{
+  position: absolute;
+  top: 0;
+  left: 300px;
+}
+
+.test2{
+  
+  border: black 2px solid ;
+  width: 32%;
+  position:absolute;
+  left: -32%;
+  top: 5%;
+  height: 90%;
+  width: 55%;
+}
+
+
+.test3{
+  
+  border: black 2px solid ;
+  width: 32%;
+  position:absolute;
+  right: -32%;
+  top: 5%;
+  height: 90%;
+  width: 55%;
+}
+
+img{
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
