@@ -221,7 +221,7 @@ svg ellipse {
 }
 
 .test1{
-  display: flex;
+ 
   flex-direction: row;
   justify-content: space-between;
   position: absolute;
@@ -238,7 +238,6 @@ article{
 
 .test2{
   
-  border: black 2px solid ;
   position:absolute;
   left: -22%;
   top: calc(50% - (82% / 2));
@@ -248,40 +247,65 @@ article{
 
 
 
-@keyframes drawBorder {
-  0%{
-    border-left: red 8px solid;
-  }
-  25% {
-    border-top: red 8px solid;
-  }
-  50% {
-    border-right: red 8px solid;
-  }
-  75% {
-    border-bottom: red 8px solid;
-  }
-  100% {
-    border: red 8px solid;
-    border-radius: 18px;
-    
-}}
+
   
 
 
 .test3{ 
   
   position:absolute;
+  
   right: -22%;
   top: calc(50% - (82vh / 2));
   max-height: 87%;
   width: 40%;
   text-align: center;
   overflow: hidden;
-  animation: drawBorder 5s forwards;
+  animation: drawBorder 5s 1s forwards;
+}
+@keyframes drawBorder {
+  0% {
+    border: 8px solid transparent;
+    border-left-color: red;
+  }
+  25% {
+    border: 8px solid transparent;
+    border-left-color: red;
+    border-top-color: red;
+  }
+  50% {
+    border: 8px solid transparent;
+    border-left-color: red;
+    border-top-color: red;
+    border-right-color: red;
+  }
+  75% {
+    border: 8px solid transparent;
+    border-left-color: red;
+    border-top-color: red;
+    border-right-color: red;
+    border-bottom-color: red;
+  }
+  100% {
+    border: red 8px solid;
+    border-radius: 18px;
+  }
+}
+
+.test-content {
+  opacity: 0;
+  animation: fadeIn 2s forwards 4s; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
 .test3 a {
-  display: block;
+  
   padding: 10px 20px;
   font-size: 18px;
   color: #fff;
@@ -289,11 +313,12 @@ article{
   border: none;
   border-radius: 5px;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: background-color 1s ease;
   width: 50%;
   margin: auto;
-  animation: dew;
+  margin-bottom: 20px;
 }
+
 
 .download-link:hover {
   background-color: #0056b3;
@@ -304,9 +329,8 @@ article{
 }
 
 img{
-  max-width: 90%;
-  max-height: 86%;
-  object-fit: contain;
+ width: 70%;
+ margin-bottom: 20px;
 }
 
 body {
