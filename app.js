@@ -20,9 +20,6 @@ function displayLetterByLetter() {
     }
 }
 
-
-
-
 let transforms = ['translateY(35%)', 'translateX(35%)', 'translateX(-35%)', 'translateY(-35%)'];
 let currentEllipse = null; // pour controler le status de l'animation ellipse. 
 
@@ -33,7 +30,6 @@ for (let i = 1; i <= 4; i++) {
 
     svg.addEventListener('mouseenter', () => {
         document.querySelector('.box-container').style.transform = transforms[i - 1];
-
         if (currentEllipse && currentEllipse !== ellipse) { // currentEllipse le douanier. pour lock l'animation de l'ellipse
             currentEllipse.style.animation = 'none';
             currentEllipse.offsetHeight; 
@@ -41,24 +37,49 @@ for (let i = 1; i <= 4; i++) {
         } 
         const allBlocks = document.querySelectorAll('.test');
         for (let block of allBlocks) {
-
             block.style.display = 'none';
         }
-        
-        document.querySelector('.test' + i).style.display = 'flex';
 
+        document.querySelector('.test' + i).style.display = 'flex';
         ellipse.style.animation = 'ellipse 1s forwards';
         currentEllipse = ellipse;
 
         if(i===2){
         displayLetterByLetter();
         }
-    });
 
-  
+        const allViews = document.querySelectorAll('.view');
+        for (let view of allViews) {
+            view.style.display = 'none';
+        }   
+    });
 }
 
+let currentEllips = null; // pour controler le status de l'animation ellipse. 
+for (let i = 1; i <= 4; i++) {
+    const project = document.querySelector(`.project${i}`);
+    const svg = project.querySelector('.test1 svg');
+    const ellipse = svg.querySelector('ellipse');
 
+    svg.addEventListener('mouseenter', () => {
+        
+        if (currentEllips ) { // currentEllipse le douanier. pour lock l'animation de l'ellipse
+            currentEllips.style.animation = 'none';
+            currentEllips.offsetHeight; 
+            currentEllips.style.animation = '';
+            currentEllips = null;
+        } 
+        const allBlocks = document.querySelectorAll('.view');
+        for (let block of allBlocks) {
+            block.style.display = 'none';
+        }
+        
+        document.querySelector('.view' + i).style.display = 'flex';
+
+        ellipse.style.animation = 'ellipse 1s forwards';
+        currentEllips = ellipse;
+    });    
+}
 
 
 

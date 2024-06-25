@@ -11,6 +11,15 @@
   box-sizing: border-box;
 }
 
+body {
+  background-image: url("https://cdn.vectorstock.com/i/2000v/95/12/whiteboard-template-blank-wall-board-vector-41449512.avif");
+  /* background-image: url("https://www.desktopbackground.org/p/2013/01/15/514945_the-gallery-for-whiteboard-wallpapers_1280x781_h.jpg"); */
+  background-repeat: no-repeat;
+  background-position: top center; 
+  background-size: cover; 
+  height: 100vh;
+}
+
 h2 {
   font-size: 40px;
   line-height: 46px;
@@ -220,20 +229,23 @@ svg ellipse {
   display: none;
 }
 
-.test1{
- 
+.test1 {
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   position: absolute;
   right: 25%;
-  top:-8%;
+  top: -22%;
   width: 50%;
-  height: 10%;
-  border: black solid 2px;
+  height: 30%;
+  
   margin: auto;
 }
 article{
   font-size: 2rem;
+  width: 45%;
+  text-align: center;
 }
 
 .test2{
@@ -261,7 +273,7 @@ article{
   width: 40%;
   text-align: center;
   overflow: hidden;
-  animation: drawBorder 5s 1s forwards;
+  animation: drawBorder 2s 1s forwards;
 }
 @keyframes drawBorder {
   0% {
@@ -294,7 +306,7 @@ article{
 
 .test-content {
   opacity: 0;
-  animation: fadeIn 2s forwards 4s; 
+  animation: fadeIn 2s forwards 2.3s; 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -333,11 +345,69 @@ img{
  margin-bottom: 20px;
 }
 
-body {
-  background-image: url("https://cdn.vectorstock.com/i/2000v/95/12/whiteboard-template-blank-wall-board-vector-41449512.avif");
-  background-repeat: no-repeat;
-  background-position: top center; /* Aligner l'image en haut */
-  background-size: cover; 
+.view{
+  display: none;
+  position: absolute;
+  width: 20%;
+  height: 50%;
+  border: black solid 2px;
+  margin: auto;
+}
+
+.view p{
+  text-align: center;
+}
+.view a{
+  position: absolute;
+  bottom: 10%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+}
+.link-left{
+left: 10%;
+color: green;
+}
+.link-right{
+right: 10%;
+}
+
+.view h2{
+  color: #FF0000;
+}
+.view h3{
+  color: blue;
+}
+.view1{ 
+  left: 4%;
+  top: -18%;
+}
+
+.view2{
+  right: 4%;
+  top: -18%;
+}
+
+.view3{ 
+  left: 4%;
+  top: -0%;
+}
+
+.view4{
+  right: 4%;
+  top: -0%;
+}  
+
+
+svg{
+text-anchor: middle;
+}
+
+.project:hover ellipse {
+  stroke-dasharray: 730;
+  stroke-dashoffset: 730;
+  stroke-linecap: round;
+  animation: ellipse 1s forwards;
+  animation-fill-mode: forwards;
 }
 
 
