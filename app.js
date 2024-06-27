@@ -22,7 +22,7 @@ function displayLetterByLetter() {
 
 let transforms = ['translateY(35%)', 'translateX(35%)', 'translateX(-35%)', 'translateY(-35%)'];
 let currentEllipse = null; // pour controler le status de l'animation ellipse. 
-
+let currentEllips = null; // pour controler le status de l'animation ellipse. 
 for (let i = 1; i <= 4; i++) {
     const box = document.querySelector(`.box${i}`);
     const svg = box.querySelector('svg');
@@ -43,7 +43,8 @@ for (let i = 1; i <= 4; i++) {
         document.querySelector('.test' + i).style.display = 'flex';
         ellipse.style.animation = 'ellipse 1s forwards';
         currentEllipse = ellipse;
-
+        
+        
         if(i===2){
         displayLetterByLetter();
         }
@@ -52,10 +53,11 @@ for (let i = 1; i <= 4; i++) {
         for (let view of allViews) {
             view.style.display = 'none';
         }   
+        currentEllips.style.animation = 'none';
     });
 }
 
-let currentEllips = null; // pour controler le status de l'animation ellipse. 
+
 for (let i = 1; i <= 4; i++) {
     const project = document.querySelector(`.project${i}`);
     const svg = project.querySelector('.test1 svg');
@@ -67,19 +69,22 @@ for (let i = 1; i <= 4; i++) {
             currentEllips.style.animation = 'none';
             currentEllips.offsetHeight; 
             currentEllips.style.animation = '';
-            currentEllips = null;
         } 
         const allBlocks = document.querySelectorAll('.view');
         for (let block of allBlocks) {
             block.style.display = 'none';
         }
         
-        document.querySelector('.view' + i).style.display = 'flex';
+        document.querySelector('.view' + i).style.display = 'block';
 
         ellipse.style.animation = 'ellipse 1s forwards';
         currentEllips = ellipse;
+
+
     });    
 }
+
+
 
 
 

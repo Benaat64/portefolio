@@ -12,7 +12,7 @@
 }
 
 body {
-  background-image: url("https://cdn.vectorstock.com/i/2000v/95/12/whiteboard-template-blank-wall-board-vector-41449512.avif");
+  background-image: url("/img/whiteboard.png");
   /* background-image: url("https://www.desktopbackground.org/p/2013/01/15/514945_the-gallery-for-whiteboard-wallpapers_1280x781_h.jpg"); */
   background-repeat: no-repeat;
   background-position: top center; 
@@ -23,7 +23,7 @@ body {
 h2 {
   font-size: 40px;
   line-height: 46px;
-  display: inline-block;
+  
 }
 
 .text-center {
@@ -236,7 +236,7 @@ svg ellipse {
   flex-wrap: wrap;
   position: absolute;
   right: 25%;
-  top: -22%;
+  top: -13%;
   width: 50%;
   height: 30%;
   
@@ -244,7 +244,7 @@ svg ellipse {
 }
 article{
   font-size: 2rem;
-  width: 45%;
+  width: 50%;
   text-align: center;
 }
 
@@ -356,6 +356,7 @@ img{
 
 .view p{
   text-align: center;
+  font-size: 1.5rem;
 }
 .view a{
   position: absolute;
@@ -373,9 +374,16 @@ right: 10%;
 
 .view h2{
   color: #FF0000;
+  text-align: center;
 }
 .view h3{
   color: blue;
+  text-align: center;
+  font-size: 1.5rem;
+}
+a.link-right.ocoffee{
+  left: 50%;
+  transform: translateX(-50%);
 }
 .view1{ 
   left: 4%;
@@ -411,7 +419,18 @@ text-anchor: middle;
 }
 
 
+.test4{
+  width: 50%;
+  justify-content: space-evenly;
+}
 
+.test4 h2{
+  color: blue;
+}
+
+.contact-left{
+
+}
 
 
 
